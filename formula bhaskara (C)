@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+// coletar as variáveis
+
+float a;
+float b;
+float c;
+
+
+int main (){
+  printf("Insira a variável a: \n ");
+  scanf("%f", &a);
+  
+  printf("Insira a variável b: \n ");
+  scanf("%f", &b);
+   
+  printf("Insira a variável c: \n ");
+  scanf("%f", &c);
+
+  //delta = b²- 4*a*c
+  //x¹, x² = -b +/- sqrt(delta) / 2*a
+
+float delta= (b*b) - 4 * a * c;
+float x1= -b + sqrt(delta) / 2*a;
+float x2= -b - sqrt(delta) / 2*a;
+
+printf ("O resultado de delta é: %.2f \n", delta);
+printf ("O resultado de x1 é: %.2f \n", x1);
+printf ("O resultado de x2 é: %.2f \n", x2);
+
+if (delta < 0){
+  printf("Essa equação não possui raízes reais");
+  return EXIT_SUCCESS;
+}
+
+return EXIT_SUCCESS;
+}
